@@ -13,4 +13,9 @@ class Currency
     @amount
   end
 
+  def ==(currency)
+    @amount == currency.amount &&  @currency_code == currency.code
+
+  end
+
 end

@@ -1,5 +1,13 @@
 require "./currency.rb"
 
-money = Currency.new(1.00,"EUR")
-puts money.code
-puts money.amount
+euro = Currency.new(1.00,"EUR")
+euros = Currency.new(10.00,"EUR")
+dollar = Currency.new(1.00, "USD")
+dollars = Currency.new(10.00,"USD")
+
+
+# puts euro.code
+# puts euro.amount
+
+tests = euro == (euro)
+puts tests
