@@ -28,4 +28,14 @@ class Currency
       puts "Not the same currency, cannot add."
     end
   end
+
+  def -(currency)
+    if @currency_code == currency.code
+      @amount - currency.amount
+    else
+      puts "Not the same currency, cannot subtract."
+    end
+  end
+
+
 end
