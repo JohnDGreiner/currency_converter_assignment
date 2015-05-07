@@ -20,4 +20,12 @@ class Currency
   def !=(currency)
     @amount != currency.amount ||  @currency_code != currency.code
   end
+
+  def +(currency)
+    if @currency_code == currency.code
+      @amount + currency.amount
+    else
+      puts "Not the same currency, cannot add."
+    end
+  end
 end

@@ -9,5 +9,8 @@ dollars = Currency.new(10.00,"USD")
 # puts euro.code
 # puts euro.amount
 
-tests = euro != (euros)
+#tests = euro != (euros)
+#puts tests
+
+tests = euro + dollar
 puts tests
