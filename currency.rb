@@ -15,7 +15,9 @@ class Currency
 
   def ==(currency)
     @amount == currency.amount &&  @currency_code == currency.code
-
   end
 
+  def !=(currency)
+    @amount != currency.amount ||  @currency_code != currency.code
+  end
 end
