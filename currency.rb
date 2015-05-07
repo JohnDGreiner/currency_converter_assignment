@@ -1,5 +1,8 @@
-class Currency
+class DifferentCurrencyCodeError < StandardError
+end
 
+class Currency
+  attr_reader
   def initialize(amount = 0.0, currency_code = "USD")
     @amount = amount
     @currency_code = currency_code
@@ -25,7 +28,8 @@ class Currency
     if @currency_code == currency.code
       @amount + currency.amount
     else
-      puts "Not the same currency, cannot add."
+      #puts "Not the same currency, cannot add."
+      raise DifferentCurrencyCodeError, "Not the same currency, cannot add."
     end
   end
 
@@ -33,7 +37,7 @@ class Currency
     if @currency_code == currency.code
       @amount - currency.amount
     else
-      puts "Not the same currency, cannot subtract."
+      raise DifferentCurrencyCodeError, "Not the same currency, cannot subtract."
     end
   end
 
