@@ -18,8 +18,8 @@ dollar_and_change = Currency.new("USD",1.50)
 #puts tests.amount
 #puts tests.currency_code
 
-exchange = CurrencyConverter.new("USD" => 1.0, "EUR" => 0.74, "JPY" => 120.00)
-#exchange.load_rates
-puts exchange.currency_rates
-check_me = exchange.convert(dollar,"JPY")
+exchange = CurrencyConverter.new({"USD" => 1.0, "EUR" => 0.74, "JPY" => 120.00})
+
+puts exchange.code_rates
+check_me = exchange.convert(euro,"JPY")
 p check_me
