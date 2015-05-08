@@ -1,4 +1,5 @@
 require "./currency.rb"
+require "./currency_converter"
 
 euro = Currency.new(1.00,"EUR")
 euros = Currency.new(10.00,"EUR")
@@ -16,3 +17,7 @@ dollar_and_change = Currency.new(1.50,"USD")
 puts tests = (dollars *2.50)
 puts tests.amount
 puts tests.currency_code
+
+exchange = CurrencyConverter.new
+exchange.load_rates
+puts exchange.currency_rates
