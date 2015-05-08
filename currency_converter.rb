@@ -7,7 +7,8 @@ class CurrencyConverter
   end
 
   def convert(currency_in,code)
-    Currency.new(code,currency_in.amount)
+
+    Currency.new(code,currency_in.amount * @currency_rates[code])
   end
 
 end

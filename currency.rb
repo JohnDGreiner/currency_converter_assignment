@@ -1,5 +1,6 @@
 class Currency
   attr_reader :currency_code, :amount
+
   def initialize(currency_code = "USD", amount = 0.0 )
     @currency_code = currency_code
     @amount = amount
