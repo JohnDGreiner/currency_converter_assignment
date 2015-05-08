@@ -14,10 +14,10 @@ dollar_and_change = Currency.new(1.50,"USD")
 #tests = euro != (euros)
 #puts tests
 
-puts tests = (dollars *2.50)
-puts tests.amount
-puts tests.currency_code
+#puts tests = (dollars *2.50)
+#puts tests.amount
+#puts tests.currency_code
 
-exchange = CurrencyConverter.new
-exchange.load_rates
+exchange = CurrencyConverter.new("USD" => 1.0, "EUR" => 0.74)
+#exchange.load_rates
 puts exchange.currency_rates
