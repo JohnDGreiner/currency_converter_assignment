@@ -2,18 +2,10 @@ class DifferentCurrencyCodeError < StandardError
 end
 
 class Currency
-  attr_reader
+  attr_reader :currency_code, :amount
   def initialize(amount = 0.0, currency_code = "USD")
     @amount = amount
     @currency_code = currency_code
-  end
-
-  def code
-    @currency_code
-  end
-
-  def amount
-    @amount
   end
 
   def ==(currency)
@@ -41,5 +33,8 @@ class Currency
     end
   end
 
+  def *(multiplier)
+    Currency.new(@amount * multiplier,@currency_code)
+  end
 
 end
