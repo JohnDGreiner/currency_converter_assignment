@@ -6,7 +6,14 @@ class CurrencyConverter
   end
 
   def convert(currency_in,code)
-    Currency.new(code,currency_in.amount * code_rates[code] / code_rates[currency_in.currency_code] )
+    if code_rates.include?(code)
+      Currency.new(code,currency_in.amount * code_rates[code] / code_rates[currency_in.currency_code] )
+    else
+      raise UnknownCurrencyCodeError, "Currency Code does not exist."
+    end
   end
 
+end
+
+class UnknownCurrencyCodeError < StandardError
 end

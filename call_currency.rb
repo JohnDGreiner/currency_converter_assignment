@@ -21,5 +21,5 @@ dollar_and_change = Currency.new("USD",1.50)
 exchange = CurrencyConverter.new({"USD" => 1.0, "EUR" => 0.74, "JPY" => 120.00})
 
 puts exchange.code_rates
-check_me = exchange.convert(euro,"JPY")
+check_me = exchange.convert(euro,"USD")
 p check_me
